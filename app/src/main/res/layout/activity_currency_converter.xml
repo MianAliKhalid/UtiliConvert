@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CurrencyConverterActivity">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_drawable"
+        android:id="@+id/top_view"/>
+
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text=" "
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/headerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bangers"
+        android:text="Currency Converter"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"/>
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/headerTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/dollar"
+        android:paddingTop="10dp"
+        android:contentDescription="Currency Converter Logo" />
+
+    <EditText
+        android:id="@+id/editTextAmount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appLogo"
+        android:layout_marginTop="32dp"
+        android:layout_marginHorizontal="16dp"
+        android:hint="Enter Amount"
+        android:inputType="numberDecimal"
+        android:background="@drawable/edittext_background" />
+
+    <!-- Convert Buttons -->
+
+    <Button
+        android:id="@+id/convertToDollarButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextAmount"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="9dp"
+        android:backgroundTint="#fece2f"
+        android:text="PKR to Dollar" />
+
+    <Button
+        android:id="@+id/convertToPKRButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/convertToDollarButton"
+        android:layout_marginTop="16dp"
+        android:layout_marginHorizontal="16dp"
+        android:text="Dollar to PKR"
+        android:backgroundTint="#fece2f" />
+
+
+    <TextView
+        android:id="@+id/resultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/convertToPKRButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text=""
+        android:textSize="18sp" />
+
+</RelativeLayout>
